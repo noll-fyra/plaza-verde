@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "NODE_ENV=test node_modules/mocha/bin/mocha"
+    "test": "NODE_ENV=test mocha test/user.test"
   },
   "license": "ISC",
   "devDependencies": {
@@ -26,5 +26,8 @@
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
+  },
+  "standard": {
+    "globals": ["expect", "describe", "it", "before"]
   }
 }

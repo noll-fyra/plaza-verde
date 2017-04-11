@@ -1,7 +1,7 @@
-var expect = require('chai').expect
+// var expect = require('chai').expect
 var request = require('supertest')
 var app = require('../index')
-var mongoose = require('mongoose')
+// var mongoose = require('mongoose')
 var dropMongooseDB = require('./drop_mongoose_db.js')
 
 before(function (done) {

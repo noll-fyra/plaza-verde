@@ -46,6 +46,11 @@ app.get('/profile', isLoggedIn, function (req, res) {
 
 app.use('/auth', require('./controllers/auth'))
 
-var server = app.listen(process.env.PORT || 3000)
-
+var server
+if (process.env.NODE_ENV === 'test') {
+  server = app.listen(process.env.PORT || 5000)
+} else {
+  server = app.listen(process.env.PORT || 3000)
+}
+console.log(process.env);
 module.exports = server
